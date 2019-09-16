@@ -1,0 +1,281 @@
+@media screen and (min-width:550px) {
+
+    a {
+        text-decoration: none;
+    }
+
+    /* 윗부분 */
+    .first-top {
+        text-align: center;
+        height: 28rem;
+        background-color: rgb(42 182 212);
+    }
+
+    /* 윗부분 - 상단 로고 */
+    .wrapper {
+        height: 6rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #logo {
+        width: auto;
+        height: 3rem;
+        margin-top: 2rem;
+    }
+
+    /* 윗부분 - 하단 사진 & 문구 */
+    .section {
+        height: 46rem;
+    }
+
+    .message {
+        height: 22rem;
+        width: 55rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .message .message-left {
+        margin-top: 3rem;
+        float: right;
+    }
+
+    .message .message-right {
+        margin-top: 3rem;
+        float: left;
+    }
+
+    #phone {
+        height: 19rem;
+        width: auto;
+    }
+
+    #title {
+        font-size: 45pt;
+        color: white;
+    }
+
+    #title-2 {
+        font-size: 20pt;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* 흰색 아래 부분 */
+    .first-bottom {
+        height: 15rem;
+        background-color: white;
+    }
+
+    .bottom {
+        height: 15rem;
+        width: 40rem;
+        background-color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .bottom .button {
+        margin-top: 2.5rem;
+        width: 40rem;
+        height: 5rem;
+        border: 3px solid;
+        border-radius: 3rem 3rem;
+        border-color: rgb(138 138 138);
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom .button2 {
+        margin-top: 2.5rem;
+        width: 40rem;
+        height: 5rem;
+        border: 3px solid;
+        border-color: rgb(77 111 169);
+        border-radius: 3rem 3rem;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom .button #name {
+        vertical-align: middle;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+        line-height: 5rem;
+        padding-right: 5rem;
+    }
+
+    .bottom .button2 #name2 {
+        vertical-align: middle;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+        line-height: 5rem;
+        padding-right: 3rem;
+    }
+
+    #loginicon {
+        height: 3rem;
+        width: auto;
+        padding-left: 5rem;
+    }
+
+    #loginicon2 {
+        height: 3rem;
+        width: auto;
+        padding-left: 3rem;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:550px) {
+
+    a {
+        text-decoration: none;
+    }
+    html,body {
+        max-height:100%;
+    }
+
+    /* 윗부분 */
+    .first-top {
+        width: 100%;
+        text-align: center;
+        height: 50%;
+        background-color: rgb(42 182 212);
+    }
+
+    /* 윗부분 - 상단 로고 */
+    .wrapper {
+        width: 100%;
+        height: 3.7rem;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #logo {
+        width: 90%;
+        height: 3.7rem;
+        margin-top: 1rem;
+    }
+
+    /* 윗부분 - 하단 사진 & 문구 */
+    .section {
+        height: 20rem;
+    }
+
+    .message {
+        display: none;
+        height: 22rem;
+        width: 50%;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .message .message-left {
+        margin-top: 3rem;
+        float: right;
+    }
+
+    .message .message-right {
+        margin-top: 3rem;
+        float: left;
+    }
+
+    #phone {
+        height: 19rem;
+        width: auto;
+    }
+
+    #title {
+        font-size: 45pt;
+        color: white;
+    }
+
+    #title-2 {
+        font-size: 20pt;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* 흰색 아래 부분 */
+    .first-bottom {
+        height: 15rem;
+        background-color: white;
+    }
+
+    .bottom {
+        height: 15rem;
+        width: 20rem;
+        background-color: white;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .bottom .button {
+        margin-top: 2.5rem;
+        width: 40rem;
+        height: 5rem;
+        border: 3px solid;
+        border-radius: 3rem 3rem;
+        border-color: rgb(138 138 138);
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom .button2 {
+        margin-top: 2.5rem;
+        width: 40rem;
+        height: 5rem;
+        border: 3px solid;
+        border-color: rgb(77 111 169);
+        border-radius: 3rem 3rem;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .bottom .button #name {
+        vertical-align: middle;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+        line-height: 5rem;
+        padding-right: 5rem;
+    }
+
+    .bottom .button2 #name2 {
+        vertical-align: middle;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+        line-height: 5rem;
+        padding-right: 3rem;
+    }
+
+    #loginicon {
+        height: 3rem;
+        width: auto;
+        padding-left: 5rem;
+    }
+
+    #loginicon2 {
+        height: 3rem;
+        width: auto;
+        padding-left: 3rem;
+    }
+}

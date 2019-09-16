@@ -1,0 +1,301 @@
+@media screen and (min-width:550px){
+    html.open {
+    overflow: hidden;
+    }
+    
+    .btn {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    }
+    
+    .close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    }
+    
+    #menu {
+    width: 28rem;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: -29rem;
+    z-index: 10;
+    border: 1px solid #c9c9c9;
+    background-color: white;
+    text-align: center;
+    transition: All 0.2s ease;
+    -webkit-transition: All 0.2s ease;
+    -moz-transition: All 0.2s ease;
+    -o-transition: All 0.2s ease;
+    }
+    
+    #menu.open {
+    left: 0px;
+    }
+    
+    .page_cover.open {
+    display: block;
+    }
+    
+    .page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
+    display: none;
+    }
+
+    /* 상하단 고정바 fix */
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 상단 고정바 */
+    .head-bar{
+    /* top: 0, position: fixed 추가 */
+    top: 0; 
+    position: fixed;
+    height: 3.7rem;
+    background-color: rgb(42 182 212);
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 3.7rem;
+    }
+    
+    #icon1{
+    width: auto;
+    height: 1.5rem;
+    margin-left:2rem;
+    }
+    #logo{
+    width: auto;
+    height: 1.8rem;
+    }
+    #icon2{
+    width: auto;
+    height: 1.4rem;
+    margin-right:2rem;
+    }
+    
+    /* 초대장목록 */
+    .middle{
+        display: flex;
+        height: 40rem;
+        background-color: #faf8f8;
+        /* text-align: center; */
+        /* align-items: center; */
+        width: 37rem;
+        margin: 0 auto;
+        margin-top: 3.7rem;
+    }
+
+    /* 초대장 안왔을 때 */
+    .middle .no {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .middle .nocheck {
+        text-align: center;
+        font-weight: bold;
+        color: #9c9c9c;
+        font-size: xx-large;
+    }
+
+    .middle .card{
+        width: 32rem;
+        height: 16rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+        align-items: center;
+        border: 2px solid rgb(188 224 253);
+        background-color: white;
+        border-radius: 20px;
+    }
+    
+    .card #title{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 26px;
+        font-weight: bold;
+        color: rgb(42 182 212);
+    }
+    .card .info{
+        width: 20rem;
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .card .info #simg{
+        width:5rem;
+        height: 5rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        border-radius: 50%;
+        border: 2px double rgb(188 224 253);
+    }
+    .card .info #content{
+        font-size: 20px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    hr.line { 
+        width: 31.5rem;
+        border: 1px dashed #9C9C9C; 
+    }
+    
+    .card .info{
+        width: 20rem;
+        height: 6rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #accept {
+        margin: 0 auto;
+        margin-right:2rem;
+        border: none;
+        background: rgb(255, 193, 7);
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 6px;
+        width: 8rem;
+        color: white;
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    }
+    #accept:hover { 
+        transform: translateY(-3px);
+        box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+    }
+    #accept {
+        transition: all 0.3s ease-in-out;
+    }
+    #reject {
+        margin: 0 auto;
+        margin-left:2rem;
+        border: none;
+        background: rgb(188 224 253);
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 6px;
+        width: 8rem;
+        color: white;
+        box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    }
+    #reject:hover { 
+        transform: translateY(-3px);
+        box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+    }
+    #reject {
+        transition: all 0.3s ease-in-out;
+    }
+    
+    
+     /* 스크롤바 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* 세로축 스크롤바 길이 */
+        height: 0px;
+        /* 가로축 스크롤바 길이 */
+    }
+    
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-button {
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+    }
+    
+    ::-webkit-scrollbar-button:start {
+        background-color: transparent;
+        /* Top, Left 방향의 이동버튼 */
+    }
+    
+    ::-webkit-scrollbar-button:end {
+        background-color: transparent;
+        /* Bottom, Right 방향의 이동버튼 */
+    }
+    
+    
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+        /* 우측 하단의 코너 부분 */
+    }
+    
+    ::-webkit-resizer {
+        background-color: transparent;
+    }
+    
+
+    /* 하단 고정바 */
+    .foot-bar{
+        /* bottom: 0, position: fixed, margin-bottom: 3.7rem 추가 */
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 37rem;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 3.7rem;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:4rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:4rem;
+    }
+    
+    }
+    

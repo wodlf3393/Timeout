@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery 연결 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>계정설정 페이지</title>
+    <script type="text/javascript"
+        src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=sg8d9f406i&submodules=geocoder">
+    </script>
+    <link rel="stylesheet" type="text/css" href="../static/css/portfolio.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <!-- 페이지 -->
+    <div class="center">
+        <div class="page">
+            <!--고정 상단바-->
+            <div class="head-bar">
+                <a href=""><img id="logo" src="../static/img/로고화이트.png" alt=""></a>
+            </div>
+            <!-- 프로필 -->
+            <div class="profile">
+                <div class="hi">
+                    <span>{{user.last_name}}{{user.first_name}}님, 안녕하세요!</span>
+                </div>
+                <form method='POST' action="{% url 'portfolio' %}" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <!-- 프로필 이미지 -->
+                    <div class="profile_img">
+                        <input type='file' id="files" accept=".gif, .jpg, .png" name='image' style='display: none;'>
+                        <input type='text' name='file2' id='file2' style='display: none;'> 
+                        <img id="profile" src="../static/img/basic_profile.png"
+                            onclick='document.all.image.click(); 
+                            document.all.file2.value = document.all.image.value'>
+                        <img id="camera" src="../static/img/camera.png"
+                            onclick='document.all.image.click(); 
+                            document.all.file2.value = document.all.image.value'>
+                    </div>
+
+                    <!-- 닉네임 및 계좌생성 -->
+                    <div class="content">
+                        <!-- 이름 닉네임 칸 -->
+                        <div class="form-item">
+                            <p class="formLabel">이름</p>
+                            <input type="name" name="name" id="name" class="form-style" autocomplete="off" />
+                        </div>
+                        <div class="form-item">
+                            <p class="formLabel">닉네임</p>
+                            <input type="nickname" name="nickname" id="nickname" class="form-style" />
+                        </div>
+                        <!-- 계좌버튼 -->
+                        <div class="create_account">
+                            <button class="button" type="submit" value="계좌생성">계좌생성</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 여기서 부터 스크립트 -->
+    <!-- 버튼누르면 프로필 사진 바뀌는 기능 -->
+    <script>
+        document.getElementById("files").onchange = function () {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+        // get loaded data and render thumbnail.
+        document.getElementById("profile").src = e.target.result;
+        };
+
+        // read the image file as a data URL.
+        reader.readAsDataURL(this.files[0]);
+        };
+    </script>
+
+    <!-- 계좌생성 버튼 -->
+    <script>
+        $(document).ready(function () {
+        var formInputs = $('input[type="name"],input[type="nickname"]');
+        formInputs.focus(function () {
+        $(this).parent().children('p.formLabel').addClass('formTop');
+        $('div#formWrapper').addClass('darken-bg');
+        $('div.logo').addClass('logo-active');
+        });
+        formInputs.focusout(function () {
+        if ($.trim($(this).val()).length == 0) {
+        $(this).parent().children('p.formLabel').removeClass('formTop');
+        }
+        $('div#formWrapper').removeClass('darken-bg');
+        $('div.logo').removeClass('logo-active');
+        });
+        $('p.formLabel').click(function () {
+        $(this).parent().children('.form-style').focus();
+        });
+        });
+    </script>
+</body>
+</html>

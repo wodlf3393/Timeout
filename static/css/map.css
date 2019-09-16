@@ -1,0 +1,998 @@
+@media screen and (min-width:550px) {
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page {
+        width: 37rem;
+        height: 32rem;
+        background-color: #faf8f8;
+        /* margin-top: 3%; */
+    }
+
+    /* 상단 고정바 */
+    .head-bar {
+        top:0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 37rem;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #icon1 {
+        width: auto;
+        height: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    #icon1:hover {
+        cursor: pointer;
+    }
+
+    #logo {
+        width: auto;
+        height: 1.8rem;
+    }
+
+    #logo:hover {
+        cursor: pointer;
+    }
+
+    #icon2 {
+        width: auto;
+        height: 1.5rem;
+        margin-right: 2rem;
+    }
+
+    #icon2:hover {
+        cursor: pointer;
+    }
+
+    /* 지도인증 부분 */
+    .arrive {
+        margin-top: 4.7rem;
+        margin-right: auto;
+        margin-left: auto;
+        width: 35rem;
+        height: 25rem;
+        border-radius: 3rem;
+        border: 0.3rem solid rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        background-color: #faf8f8;
+
+    }
+
+    /* 지도 */
+    .map {
+        margin-top: 2em;
+        width: 50%;
+        height: auto;
+        /* margin : 1rem 1rem;
+        border-radius: 4rem; */
+    }
+
+    #map {
+        width: 95%;
+        height: 18rem;
+        margin: 1rem .3rem;
+        border-radius: 4rem;
+    }
+
+    .map #reach-mobile {
+        display: none;
+    }
+
+    /* 약속 내용 */
+    .map-bottom {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .arrive-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .arrive-content #reach-pc {
+        font-size: xx-large;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(42 182 212);
+        margin: 1rem;
+    }
+
+    .arrive-content #group-name {
+        margin-top: .5rem;
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    .arrive-content #schedule {
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    .arrive-button .group-img {
+        width: 95%;
+        display: flex;
+        margin-top: .5rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 4rem;
+        border-radius: 1rem;
+        margin-right: 0.2rem;
+        margin-left: 0.1rem;
+    }
+
+    .arrive-button .group-img #member-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-left: 1.5rem;
+        margin-right: .2rem;
+    }
+    
+
+    #timeout {
+        margin-top: 1rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* 아래(약속) 부분 */
+    .bottom {
+        height: 15.5rem;
+        background-color: #faf8f8;
+        width: 37rem;
+        margin: 0 auto;
+        margin-top: .6rem;
+    }
+    #schedule-list {
+        font-weight: bold;
+        font-size: large;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+    
+    .schedule-scroll {
+        height: 6.6rem;
+        overflow: scroll;
+    }
+
+    .schedule {
+        width: 35rem;
+        height: 3rem;
+        margin-left: 1rem;
+        background-color: rgb(84 103 143);
+        border-radius: 1rem 1rem;
+        text-align: center;
+        margin-bottom: .3rem;
+    }
+
+    .schedule #schedule-name {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .schedule #schedule-date {
+        display: table-cell;
+        vertical-align: middle;
+        width: 15rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .schedule #schedule-money {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    #red{
+        text-align: center;
+        margin-right: 2em;
+        margin-left: 2em;
+        height: 2em;
+    }
+    #demo{
+        margin-top: -0.5em;
+
+    }
+
+    /* 하단 고정바 */
+    .foot-bar {
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 37rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:4rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:4rem;
+    }
+
+    /* 스크롤바 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* 세로축 스크롤바 길이 */
+        height: 0px;
+        /* 가로축 스크롤바 길이 */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    ::-webkit-scrollbar-button:start {
+        background-color: transparent;
+        /* Top, Left 방향의 이동버튼 */
+    }
+
+    ::-webkit-scrollbar-button:end {
+        background-color: transparent;
+        /* Bottom, Right 방향의 이동버튼 */
+    }
+
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+        /* 우측 하단의 코너 부분 */
+    }
+
+    ::-webkit-resizer {
+        background-color: transparent;
+    }
+
+}
+
+@media screen and (min-width:480px) and (max-width:550px) {
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page {
+        width: 100vw;
+        height: 100vh;
+        background-color: #faf8f8;
+        /* margin-top: 3%; */
+        /* padding-bottom:1rem; */
+    }
+
+    /* 상단 고정바 */
+    .head-bar {
+        top:0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #icon1 {
+        width: auto;
+        height: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    #icon1:hover {
+        cursor: pointer;
+    }
+
+    #logo {
+        width: auto;
+        height: 1.8rem;
+    }
+
+    #logo:hover {
+        cursor: pointer;
+    }
+
+    #icon2 {
+        width: auto;
+        height: 1.5rem;
+        margin-right: 2rem;
+    }
+
+    #icon2:hover {
+        cursor: pointer;
+    }
+
+    /* 약속이 없을 때 */
+    .no {
+        margin: 0 auto;
+        margin-top: 8rem;
+        display: flex;
+
+    }
+
+    .no #noarrive {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        color: #9c9c9c;;
+        margin: 0 auto;
+
+    }
+
+    /* 지도인증 부분 */
+    .arrive {
+        margin-top: 4.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        height: 30rem;
+        border-radius: 3rem;
+        border: 0.3rem solid rgb(42 182 212);
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        background-color: #faf8f8;
+    }
+
+    .map {
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    #map {
+        width: 95%;
+        height: 18rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    .map #reach-mobile {
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(42 182 212);
+        justify-content: space-around;
+        margin-bottom: .5rem;
+    }
+
+    .map-bottom {
+        display: flex;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .arrive-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        margin-top: 7%;
+    }
+
+    .arrive-content #reach-pc {
+        display: none;
+    }
+
+    .arrive-content #group-name {
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    .arrive-content #schedule {
+        /* margin-right: 1rem; */
+        margin-top: .2rem;
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    #red{
+        text-align: center;
+        margin-top: 2%;
+        margin-right: 4%;
+        margin-left: 4%;
+        height: 2rem;
+    }
+    #demo{
+        margin-top: -0.5em;
+
+    }
+
+    .arrive-button {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: .2rem auto;
+    }
+
+    .arrive-button .group-img {
+        display: flex;
+        margin-top: .5rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 4rem;
+        border-radius: 1rem;
+    }
+
+    .arrive-button .group-img #member-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-right: .2rem;
+    }
+
+    .arrive-button #timeout {
+        margin-top: .3rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* 아래(약속) 부분 */
+    .bottom {
+        height: 11rem;
+        background-color: #faf8f8;
+        width: 95%;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4.7rem;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        border-radius: .5rem;
+        ;
+    }
+
+    #schedule-list {
+        font-weight: bold;
+        font-size: large;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .schedule-scroll {
+        height: 6.7rem;
+        overflow-y: scroll;
+    }
+
+    .schedule {
+        width: 90%;
+        height: 3rem;
+        margin-left: 5%;
+        background-color: rgb(84 103 143);
+        border-radius: 1rem 1rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .schedule #schedule-name {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .schedule #schedule-date {
+        display: table-cell;
+        vertical-align: middle;
+        width: 15rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .schedule #schedule-money {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    /* 하단 고정바 */
+    .foot-bar {
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:2.5rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:2.5rem;
+    }
+    
+
+    /* 스크롤바 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* 세로축 스크롤바 길이 */
+        height: 0px;
+        /* 가로축 스크롤바 길이 */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    ::-webkit-scrollbar-button:start {
+        background-color: transparent;
+        /* Top, Left 방향의 이동버튼 */
+    }
+
+    ::-webkit-scrollbar-button:end {
+        background-color: transparent;
+        /* Bottom, Right 방향의 이동버튼 */
+    }
+
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+        /* 우측 하단의 코너 부분 */
+    }
+
+    ::-webkit-resizer {
+        background-color: transparent;
+    }
+
+}
+
+
+@media screen and (max-width:480px) {
+    .center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page {
+        width: 100vw;
+        height: 100vh;
+        background-color: #faf8f8;
+        /* margin-top: 3%; */
+        /* padding-bottom:1rem; */
+    }
+
+    /* 상단 고정바 */
+    .head-bar {
+        top:0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #icon1 {
+        width: auto;
+        height: 1.5rem;
+        margin-left: 2rem;
+    }
+
+    #icon1:hover {
+        cursor: pointer;
+    }
+
+    #logo {
+        width: auto;
+        height: 1.8rem;
+    }
+
+    #logo:hover {
+        cursor: pointer;
+    }
+
+    #icon2 {
+        width: auto;
+        height: 1.5rem;
+        margin-right: 2rem;
+    }
+
+    #icon2:hover {
+        cursor: pointer;
+    }
+
+    /* 약속이 없을 때 */
+    .no {
+        margin: 0 auto;
+        margin-top: 8rem;
+        display: flex;
+
+    }
+
+    .no #noarrive {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: xx-large;
+        font-weight: bold;
+        color: #9c9c9c;;
+        margin: 0 auto;
+
+    }
+
+    /* 지도인증 부분 */
+    .arrive {
+        margin-top: 4.7rem;
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
+        height: 30rem;
+        border-radius: 3rem;
+        border: 0.3rem solid rgb(42 182 212);
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        background-color: #faf8f8;
+    }
+
+    .map {
+        display: flex;
+        flex-direction: column;
+        margin-top: .5rem;
+        width: 100%;
+        height: auto;
+    }
+
+    #map {
+        width: 95%;
+        height: 18rem;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+
+    .map #reach-mobile {
+        font-size: x-large;
+        font-weight: bold;
+        text-align: center;
+        color: rgb(42 182 212);
+        justify-content: space-around;
+        margin-bottom: .5rem;
+    }
+
+    .map-bottom {
+        display: flex;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .arrive-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        margin-top: 7%;
+    }
+
+    .arrive-content #reach-pc {
+        display: none;
+    }
+
+    .arrive-content #group-name {
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    .arrive-content #schedule {
+        /* margin-right: 1rem; */
+        margin-top: .2rem;
+        font-size: medium;
+        font-weight: bold;
+        text-align: center;
+        color: black;
+    }
+
+    #red{
+        text-align: center;
+        margin-top: 2%;
+        margin-right: 4%;
+        margin-left: 4%;
+        height: 2rem;
+    }
+    #demo{
+        margin-top: -0.5em;
+
+    }
+
+    .arrive-button {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: .2rem auto;
+    }
+
+    .arrive-button .group-img {
+        display: flex;
+        margin-top: .5rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        height: 4rem;
+        border-radius: 1rem;
+    }
+
+    .arrive-button .group-img #member-img {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-right: .2rem;
+    }
+
+    .arrive-button #timeout {
+        margin-top: .3rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    /* 아래(약속) 부분 */
+    .bottom {
+        height: 11rem;
+        background-color: #faf8f8;
+        width: 95%;
+        margin-top: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 4.7rem;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        border-radius: .5rem;
+        ;
+    }
+
+    #schedule-list {
+        font-weight: bold;
+        font-size: large;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+    }
+
+    .schedule-scroll {
+        height: 6.8rem;
+        overflow-y: scroll;
+    }
+
+    .schedule {
+        width: 90%;
+        height: 3rem;
+        margin-left: 5%;
+        background-color: rgb(84 103 143);
+        border-radius: 1rem 1rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .schedule #schedule-name {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .schedule #schedule-date {
+        display: table-cell;
+        vertical-align: middle;
+        width: 15rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .schedule #schedule-money {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color: white;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    /* 하단 고정바 */
+    .foot-bar {
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100vw;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:2.5rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:2.5rem;
+    }
+    
+
+    /* 스크롤바 */
+    ::-webkit-scrollbar {
+        width: 0px;
+        /* 세로축 스크롤바 길이 */
+        height: 0px;
+        /* 가로축 스크롤바 길이 */
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 0px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-button {
+        background-color: transparent;
+        width: 0px;
+        height: 0px;
+    }
+
+    ::-webkit-scrollbar-button:start {
+        background-color: transparent;
+        /* Top, Left 방향의 이동버튼 */
+    }
+
+    ::-webkit-scrollbar-button:end {
+        background-color: transparent;
+        /* Bottom, Right 방향의 이동버튼 */
+    }
+
+
+    ::-webkit-scrollbar-corner {
+        background-color: transparent;
+        /* 우측 하단의 코너 부분 */
+    }
+
+    ::-webkit-resizer {
+        background-color: transparent;
+    }
+
+}

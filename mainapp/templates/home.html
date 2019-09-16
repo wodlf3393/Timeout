@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery 연결 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="../static/css/home.css" rel="stylesheet">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="container">
+        <!--고정 상단바-->
+        <div class="head-bar">
+            <img id="icon1" src="../static/img/list.png" alt="">
+            <img id="logo" src="../static/img/로고화이트.png" alt="">
+            <img id="icon2" src="../static/img/bell.png" alt="">
+        </div>
+        <div onclick="history.back();" class="page_cover"></div>
+        <div id="menu">
+            <div onclick="history.back();" class="close"></div>
+        </div>
+        <div class="page">
+            <!--계정-->
+            <div class="top">
+                <p id="hi">안녕하세요,<br><span id="bold">{{us.nickname}}</span>님</p>
+                {% if not us.image %}
+                <img id="round" src="../static/img/basic.png" alt="">
+                {% else %}
+                <img id="round" src="{{us.image.url}}" alt="">
+                {% endif %}
+            </div>
+            <!--계좌 리스트-->
+            <div class="middle">
+                <div class="side">
+                    <div class="side-bar bg-warning" style="height: 30%" aria-valuenow="30" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                    <div class="side-bar bg-info" style="height: 70%" aria-valuenow="70" aria-valuemin="0"
+                        aria-valuemax="100"></div>
+                </div>
+                <div class="account">
+                    <div class="myaccount">
+                        <p id="name" style="color:black;">{{us.nickname}}님의 타임계좌</p>
+                        <h1 id="money" style="color:black;">{{us.user_money}}원</h1>
+                        <div class="division">
+                            <div class="mbutton"><span id="font">송금하기</span></div>
+                            <div class="mbutton2">
+                                <a href="{% url 'charge' us.id %}"><span id="font">충전하기</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% for group in groups%}
+                    <div class="group">
+                        <p id="name" style="color:white;">{{group.title}}의 타임계좌</p>
+                        <a class="hovergroup" href="{% url 'group' group.id %}" style="color:red;">
+
+                            <h1 id="money" style="color:white;">{{group.group_money}}원</h1>
+                        </a>
+                        <div class="division">
+                            <div class="gbutton"><span id="font">송금하기</span></div>
+                            <div class="gbutton2"><span id="font">구매하기</span></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <div class="group-plus">
+                        <a href='{% url "invite" %}'>
+                            <div class="group-plus-plus">
+                                <img src="../static/img/group-plus-white.png">
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--약속 리스트-->
+            <div class="bottom">
+                <p id="schedule-list" style="color:black;">지켜야 할 약속</p>
+                {% if not first %}
+                <div class="schedule">
+                    <span id="schedule-date">예정된 약속이 없습니다.</span>
+                </div>
+                {% else %}
+                <div class="schedule">
+                    <span id="schedule-name">{{first.title}}</span>
+                    <span id="schedule-date">{{first.date.year}}년 {{first.date.month}}월 {{first.date.day}}일 {{first.date.hour}}시</span>
+                    <span id="schedule-money">{{first.penalty}}원</span>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        <!-- 하단 고정바 -->
+        <div class="foot-bar">
+            <a href="{% url 'home' %}"><img id="foot-home" src="../static/img/home.png" alt=""></a>
+            <a href="{% url 'check' %}"><img id="foot-invite" src="../static/img/invite.png" alt=""></a>
+            <a href="{% url 'map' %}"><img id="foot-bell" src="../static/img/bell.png" alt=""></a>
+            <a href="{% url 'portfolio' %}"><img id="foot-user" src="../static/img/user.png" alt=""></a>
+        </div>
+    </div>
+    <script>
+        $("#icon1").click(function () {
+            $("#menu,.page_cover,html").addClass("open");
+            window.location.hash = "#open";
+        });
+
+        window.onhashchange = function () {
+            if (location.hash != "#open") {
+                $("#menu,.page_cover,html").removeClass("open");
+            }
+        };
+    </script>
+</body>
+
+</html>

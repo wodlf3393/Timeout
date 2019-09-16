@@ -1,0 +1,1388 @@
+/* 제일 굵음 */
+@font-face { font-family: 'Eoe_Zno_EB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_EB.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* bold */
+@font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* medium */
+@font-face { font-family: 'Eoe_Zno_M'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* light */
+@font-face { font-family: 'Eoe_Zno_L'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_L.woff') format('woff'); font-weight: normal; font-style: normal; }
+@media screen and (min-width:550px){
+    
+/* 슬라이드 바 */
+html.open {
+overflow: hidden;
+}
+
+.btn {
+position: absolute;
+z-index: 1;
+cursor: pointer;
+}
+
+.close {
+width: 50px;
+height: 50px;
+position: absolute;
+left: 0px;
+top: 0px;
+background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+background-size: 50%;
+background-repeat: no-repeat;
+background-position: center;
+cursor: pointer;
+}
+
+
+#menu {
+width: 28rem;
+height: 100%;
+position: fixed;
+top: 0px;
+left: -29rem;
+z-index: 10;
+border: 1px solid #c9c9c9;
+background-color: white;
+text-align: center;
+transition: All 0.2s ease;
+-webkit-transition: All 0.2s ease;
+-moz-transition: All 0.2s ease;
+-o-transition: All 0.2s ease;
+}
+
+#menu.open {
+left: 0px;
+}
+
+.page_cover.open {
+display: block;
+}
+
+.page_cover {
+width: 100%;
+height: 100%;
+position: fixed;
+top: 0px;
+right: 0px;
+background-color: rgba(0, 0, 0, 0.3);
+z-index: 4;
+display: none;
+}
+
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 상단 고정바 */
+.head-bar{
+    top: 0;
+    position: fixed;
+    height: 3.7rem;
+    background-color: rgb(42 182 212);
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+#icon1{
+    width: auto;
+    height: 1.5rem;
+    margin-left:2rem;
+}
+
+
+#icon1:hover{
+    cursor: pointer;
+}
+
+#logo{
+    width: auto;
+    height: 1.8rem;
+}
+#icon2{
+    width: auto;
+    height: 1.4rem;
+    margin-right:2rem;
+}
+
+/* 계정 부분 */
+.top{
+    height: 12.5rem;
+    background-color: rgb(42 182 212);
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    align-items: center;
+    margin: 0 auto;
+    /* 상단바때문에 margin 줌 */
+    margin-top: 3.7rem;
+}
+/* 안내문구 */
+#hi{
+    font-family: 'Eoe_Zno_M';
+    color: white;
+    float: left;
+    margin-left: 2rem;
+    font-size: large;
+}
+#bold{
+    font-family: 'Eoe_Zno_B';
+    font-size:xx-large;
+    color: white;
+}
+/* 계정 사진 */
+#round{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    float:right;
+    margin-right: 2rem;
+}
+
+
+/* 중간 계좌 부분 */
+.middle{
+    height: 32rem;
+    background-color: #faf8f8;
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    margin: 0 auto;
+}
+.side{
+    width: 2rem;
+    float:left;
+    margin-top: 2rem;
+    margin-left: 4rem;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+    /* box-shadow: 0.1px 0.5px 1px rgb(94, 102, 70); */
+}
+
+/* 계좌 */
+.account{
+    width:30rem;
+    float:right;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right:2rem;
+    overflow:auto;
+}
+.myaccount {
+    font-family: 'Eoe_Zno_M';
+    width: 25rem;
+    height: 13rem;
+    background: rgb(188, 224, 253);
+    margin-bottom: 2rem;
+    box-shadow: 2px 1.5px 3px rgb(118, 161, 197);
+    
+}
+.group {
+    font-family: 'Eoe_Zno_M';
+    width: 25rem;
+    height: 13rem;
+    background: rgb(42 182 212);
+    margin-bottom: 2rem;
+    box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+}
+
+#name{
+    font-weight: bold; 
+    font-size:large;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+#money{
+    font-weight: bold; 
+    font-size: 25pt;
+    padding-top: 1rem;
+    padding-bottom:2rem;
+    text-align: center;
+    margin: auto;
+}
+
+/* 버튼 */
+.hovergroup:hover {
+    color:red;
+}
+
+.division{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 3.1rem;
+}
+.mbutton{
+    /* 송금하기 */
+    width: 14.5rem;
+    height: 3.7rem;
+    float:left;
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: rgb(100, 99, 99);
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: rgb(100, 99, 99);
+}
+.mbutton2{
+    /* 구매하기 */
+    width: 14.5rem;
+    height: 3.7rem;
+    float:left;
+    text-align: center;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: rgb(100, 99, 99);
+}
+
+.mbutton:hover{
+    background-color:white;
+    color:black;
+} 
+.mbutton2:hover{
+    background-color:white;
+    color:black;
+} 
+
+#font{
+    width: 14.5rem;
+    height: 3.7rem;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+.gbutton{
+    /* 송금하기 */
+    width: 14.5rem;
+    height: 3.7rem;
+    float:left;
+    text-align: center;
+    color: white;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #fdfdfd;
+    border-right-style: solid;
+    border-right-width: thin;
+    border-right-color: #fdfdfd;
+}
+.gbutton2{
+    /* 구매하기 */
+    width: 14.5rem;
+    height: 3.7rem;
+    float:left;
+    text-align: center;
+    color: white;
+    border-top-style: solid;
+    border-top-width: thin;
+    border-top-color: #fdfdfd;
+}
+.gbutton:hover{
+    background-color:white;
+    color:black;
+} 
+.gbutton2:hover{
+    background-color:white;
+    color:black;
+} 
+
+/* group 플러스 버튼 */
+.group-plus {
+    width: 25rem;
+    height: 13rem;
+    background: rgb(42 182 212);
+    margin-bottom: 2rem;
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    justify-content: center;
+    box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+}
+
+.group-plus :hover{
+    cursor:pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.group-plus-plus{
+    width :8rem;
+    height: 5rem;
+    text-align: center;
+    margin-left: 8.4rem;
+    border :0.1rem solid #fdfdfd; 
+    box-shadow: 0.5px 0.5px 1px rgb(105, 138, 165);
+}
+.group-plus-plus :hover{
+    cursor:pointer;
+    background-color:transparent;
+}
+
+.group-plus-plus img {
+    margin-top: 1.4rem;
+    vertical-align: middle;
+    width : 2rem;
+    height: 2rem;
+    -webkit-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+    -moz-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+    -ms-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+    -o-filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .5));
+    filter: drop-shadow(0px 1px 0.5px rgb(105, 138, 165));
+}
+
+/* 아래(약속) 부분 */
+.bottom{
+    font-family: 'Eoe_Zno_M';
+    height: 9rem;
+    background-color: #faf8f8;
+    width: 37rem;
+    margin: 0 auto;
+    margin-top: .6rem;
+    overflow:auto;
+    /* 하단바때문에 margin 줌 */
+    margin-bottom: 3.7rem;
+}
+#schedule-list{
+    font-weight: bold; 
+    font-size:large;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.schedule{
+    width: 35rem;
+    height: 3rem;
+    margin-left: 1rem;
+    background-color: rgb(84 103 143);
+    border-radius: 1rem 1rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.schedule #schedule-name {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10rem;
+    height: 3rem;
+    color : white;
+    font-size: large;
+}
+
+.schedule #schedule-date {
+    display: table-cell;
+    vertical-align: middle;
+    width: 15rem;
+    height: 3rem;
+    color : white;
+    font-size: large;
+    text-align: center;
+}
+
+.schedule #schedule-money {
+    display: table-cell;
+    vertical-align: middle;
+    width: 10rem;
+    height: 3rem;
+    color : white;
+    font-size: large;
+}
+
+/* 하단 고정바 */
+.foot-bar{
+    bottom: 0;
+    position: fixed;
+    height: 3.7rem;
+    background-color: rgb(42 182 212);
+    display: flex;
+    justify-content: space-between;
+    width: 37rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#foot-home{
+    width: auto;
+    height: 2.5rem;
+    margin-left:4rem;
+}
+#foot-invite{
+    width: auto;
+    height: 2.5rem;
+}
+#foot-bell{
+    width: auto;
+    height: 2.5rem;
+}
+#foot-user{
+    width: auto;
+    height: 2.5rem;
+    margin-right:4rem;
+}
+
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+    width: 0px;
+    /* 세로축 스크롤바 길이 */
+    height: 0px;
+    /* 가로축 스크롤바 길이 */
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+    background-color:transparent;
+    width: 0px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-button:start {
+    background-color: transparent;
+    /* Top, Left 방향의 이동버튼 */
+}
+
+::-webkit-scrollbar-button:end {
+    background-color: transparent;
+    /* Bottom, Right 방향의 이동버튼 */
+}
+
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+    /* 우측 하단의 코너 부분 */
+}
+
+::-webkit-resizer {
+    background-color:transparent;
+}
+}
+/* 두번째꺼 */
+@media screen and (min-width:480px) and (max-width:550px){
+    /* 슬라이드 바 */
+html.open {
+    overflow: hidden;
+    }
+    
+    .btn {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    }
+    
+    .close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    }
+    
+    
+    #menu {
+    width: 28rem;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: -29rem;
+    z-index: 10;
+    border: 1px solid #c9c9c9;
+    background-color: white;
+    text-align: center;
+    transition: All 0.2s ease;
+    -webkit-transition: All 0.2s ease;
+    -moz-transition: All 0.2s ease;
+    -o-transition: All 0.2s ease;
+    }
+    
+    #menu.open {
+    left: 0px;
+    }
+    
+    .page_cover.open {
+    display: block;
+    }
+    
+    .page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
+    display: none;
+    }
+    
+    
+    html,body { 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+    }
+
+    #container {
+        max-height: 100%; 
+        position: relative;
+    }
+
+    .page {
+        overflow: scroll;
+    }
+
+    /* 상단 고정바 */
+    .head-bar{
+        top: 0;
+        position:fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+    #icon1{
+        width: auto;
+        height: 1.5rem;
+        margin-left:2rem;
+    }
+    #icon1:hover{
+        cursor:pointer;
+    }
+    #logo{
+        width: auto;
+        height: 1.8rem;
+    }
+    #icon2{
+        width: auto;
+        height: 1.4rem;
+        margin-right:2rem;
+    }
+    #icon2:hover{
+        cursor:pointer;
+    }
+
+    /* 계정 부분 */
+    .top{
+        margin-top: 3.7rem;
+        height: 12.5rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        /* margin: 0 auto; */
+    }
+    /* 안내문구 */
+    #hi{
+        color: white;
+        float: left;
+        margin-left: 2rem;
+        font-size: large;
+    }
+    #bold{
+        font-weight: bold; 
+        font-size:xx-large;
+        color: white;
+    }
+    /* 계정 사진 */
+    #round{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        float:right;
+        margin-right: 2rem;
+    }
+
+
+    /* 중간 계좌 부분 */
+    .middle{
+        height: 32rem;
+        background-color: #faf8f8;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .side{
+        width: 8%;
+        float:left;
+        margin-top: 2rem;
+        margin-left: 5%;
+        margin-right: 2%;
+        margin-bottom: 2rem;
+    }
+
+    /* 계좌 */
+    .account{
+        width: 85%;
+        float:right;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    .myaccount {
+        width: 95%;
+        height: 13rem;
+        background: rgb(188, 224, 253);
+        margin-bottom: 2rem;
+        box-shadow: 2px 1.5px 3px rgb(118, 161, 197);
+    }
+    .group {
+        width: 95%;
+        height: 13rem;
+        background: rgb(42 182 212);
+        margin-bottom: 2rem;
+        box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+    }
+
+    #name{
+        font-weight: bold; 
+        font-size:large;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    #money{
+        font-weight: bold; 
+        font-size: 25pt;
+        padding-top: 1rem;
+        padding-bottom:2rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* 버튼 */
+    .division{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 3.1rem;
+    }
+    .mbutton{
+        /* 송금하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: rgb(100, 99, 99);
+        border-right-style: solid;
+        border-right-width: thin;
+        border-right-color: rgb(100, 99, 99);
+    }
+    .mbutton2{
+        /* 구매하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: rgb(100, 99, 99);
+    }
+
+    .mbutton:hover{
+        background-color:white;
+        color:black;
+    } 
+    .mbutton2:hover{
+        background-color:white;
+        color:black;
+    } 
+
+    #font{
+        width: 14.5rem;
+        height: 3.7rem;
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+    .gbutton{
+        /* 송금하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        color: white;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: #fdfdfd;
+        border-right-style: solid;
+        border-right-width: thin;
+        border-right-color: #fdfdfd;
+    }
+    .gbutton2{
+        /* 구매하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        color: white;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: #fdfdfd;
+    }
+    .gbutton:hover{
+        background-color:white;
+        color:black;
+    } 
+    .gbutton2:hover{
+        background-color:white;
+        color:black;
+    } 
+
+    /* group 플러스 버튼 */
+    .group-plus {
+        width: 65%;
+        height: 13rem;
+        background: rgb(42 182 212);
+        margin-bottom: 2rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
+        justify-content: center;;
+        box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+    }
+
+    .group-plus :hover{
+        cursor:pointer;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .group-plus-plus{
+        width :8rem;
+        height: 5rem;
+        text-align: center;
+        margin-left: 8.4rem;
+        border :0.1rem solid white; 
+    }
+    .group-plus-plus :hover{
+        cursor:pointer;
+        background-color:transparent;
+    }
+
+    .group-plus-plus img {
+        margin-top: 1.4rem;
+        vertical-align: middle;
+        width : 2rem;
+        height: 2rem;
+    }
+
+    /* 아래(약속) 부분 */
+    .bottom{
+        height: 9rem;
+        background-color: #faf8f8;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom:3.7rem;
+    }
+    #schedule-list{
+        font-weight: bold; 
+        font-size:large;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .schedule{
+        width: 90%;
+        height: 3rem;
+        margin-left: 5%;
+        background-color: rgb(84 103 143);
+        border-radius: 1rem 1rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .schedule #schedule-name {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color : white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .schedule #schedule-date {
+        display: table-cell;
+        vertical-align: middle;
+        width: 15rem;
+        height: 3rem;
+        color : white;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .schedule #schedule-money {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color : white;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    /* 하단 고정바 */
+    .foot-bar{
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 37rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:4rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:4rem;
+    }
+    
+        /* 스크롤바 */
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* 세로축 스크롤바 길이 */
+            height: 0px;
+            /* 가로축 스크롤바 길이 */
+        }
+    
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-track-piece {
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-button {
+            background-color:transparent;
+            width: 0px;
+            height: 0px;
+        }
+    
+        ::-webkit-scrollbar-button:start {
+            background-color: transparent;
+            /* Top, Left 방향의 이동버튼 */
+        }
+    
+        ::-webkit-scrollbar-button:end {
+            background-color: transparent;
+            /* Bottom, Right 방향의 이동버튼 */
+        }
+    
+    
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+            /* 우측 하단의 코너 부분 */
+        }
+    
+        ::-webkit-resizer {
+            background-color:transparent;
+        }
+}
+
+/* 휴대폰 */
+@media screen and (max-width:480px){
+    html,body { 
+        height: 100%; 
+        margin: 0; 
+        padding: 0; 
+    }
+
+    #container {
+        max-height: 100%; 
+        position: relative;
+    }
+
+    .page {
+        overflow: scroll;
+    }
+    /* 슬라이드 바 */
+    html.open {
+    overflow: hidden;
+    }
+    
+    .btn {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    }
+    
+    .close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-image: url("http://s1.daumcdn.net/cfs.tistory/custom/blog/204/2048858/skin/images/close.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    }
+    
+    
+    #menu {
+    width: 28rem;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: -29rem;
+    z-index: 10;
+    border: 1px solid #c9c9c9;
+    background-color: white;
+    text-align: center;
+    transition: All 0.2s ease;
+    -webkit-transition: All 0.2s ease;
+    -moz-transition: All 0.2s ease;
+    -o-transition: All 0.2s ease;
+    }
+    
+    #menu.open {
+    left: 0px;
+    }
+    
+    .page_cover.open {
+    display: block;
+    }
+    
+    .page_cover {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 4;
+    display: none;
+    }
+
+    /* 상단 고정바 */
+    .head-bar{
+        top:0;
+        position:fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        
+    }
+    #icon1{
+        width: auto;
+        height: 1.5rem;
+        margin-left:2rem;
+    }
+    #icon1:hover{
+        cursor:pointer;
+    }
+    #logo{
+        width: auto;
+        height: 1.8rem;
+    }
+    #icon2{
+        width: auto;
+        height: 1.4rem;
+        margin-right:2rem;
+    }
+    #icon2:hover{
+        cursor:pointer;
+    }
+
+    /* 계정 부분 */
+    .top{
+        margin-top: 3.7rem;
+        height: 12.5rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        /* margin: 0 auto; */
+    }
+    /* 안내문구 */
+    #hi{
+        color: white;
+        float: left;
+        margin-left: 2rem;
+        font-size: large;
+    }
+    #bold{
+        font-weight: bold; 
+        font-size:xx-large;
+        color: white;
+    }
+    /* 계정 사진 */
+    #round{
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        float:right;
+        margin-right: 2rem;
+    }
+
+
+    /* 중간 계좌 부분 */
+    .middle{
+        height: 32rem;
+        background-color: #faf8f8;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .side{
+        width: 8%;
+        float:left;
+        margin-top: 2rem;
+        margin-left: 5%;
+        margin-right: 2%;
+        margin-bottom: 2rem;
+    }
+
+    /* 계좌 */
+    .account{
+        width: 85%;
+        float:right;
+        margin-top: 2rem;
+        margin-left: 1rem;
+    }
+    .myaccount {
+        width: 95%;
+        height: 13rem;
+        background: rgb(188, 224, 253);
+        margin-bottom: 2rem;
+        box-shadow: 2px 1.5px 3px rgb(118, 161, 197);
+    }
+    .group {
+        width: 95%;
+        height: 13rem;
+        background: rgb(42 182 212);
+        margin-bottom: 2rem;
+        box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+    }
+
+    #name{
+        font-weight: bold; 
+        font-size:large;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    #money{
+        font-weight: bold; 
+        font-size: 25pt;
+        padding-top: 1rem;
+        padding-bottom:2rem;
+        text-align: center;
+        margin: auto;
+    }
+
+    /* 버튼 */
+    .division{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        height: 3.1rem;
+    }
+    .mbutton{
+        /* 송금하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: rgb(100, 99, 99);
+        border-right-style: solid;
+        border-right-width: thin;
+        border-right-color: rgb(100, 99, 99);
+    }
+    .mbutton2{
+        /* 구매하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: rgb(100, 99, 99);
+    }
+
+    .mbutton:hover{
+        background-color:white;
+        color:black;
+    } 
+    .mbutton2:hover{
+        background-color:white;
+        color:black;
+    } 
+
+    #font{
+        width: 14.5rem;
+        height: 3.7rem;
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: bold;
+    }
+
+    .gbutton{
+        /* 송금하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        color: white;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: #fdfdfd;
+        border-right-style: solid;
+        border-right-width: thin;
+        border-right-color: #fdfdfd;
+    }
+    .gbutton2{
+        /* 구매하기 */
+        width: 14.5rem;
+        height: 3.7rem;
+        float:left;
+        text-align: center;
+        color: white;
+        border-top-style: solid;
+        border-top-width: thin;
+        border-top-color: #fdfdfd;
+    }
+    .gbutton:hover{
+        background-color:white;
+        color:black;
+    } 
+    .gbutton2:hover{
+        background-color:white;
+        color:black;
+    } 
+
+    /* group 플러스 버튼 */
+    .group-plus {
+        width: 65%;
+        height: 13rem;
+        background: rgb(42 182 212);
+        margin-bottom: 2rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align:center;
+        justify-content: center;
+        box-shadow: 1.5px 1.5px 3px rgb(76, 114, 145);
+    }
+
+    .group-plus :hover{
+        cursor:pointer;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .group-plus-plus{
+        width :8rem;
+        height: 5rem;
+        text-align: center;
+        margin-left: 8.4rem;
+        border :0.1rem solid white; 
+    }
+    .group-plus-plus :hover{
+        cursor:pointer;
+        background-color:transparent;
+    }
+
+    .group-plus-plus img {
+        margin-top: 1.4rem;
+        vertical-align: middle;
+        width : 2rem;
+        height: 2rem;
+    }
+
+    /* 아래(약속) 부분 */
+    .bottom{
+        height: 9rem;
+        background-color: #faf8f8;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom:3.7rem;
+    }
+    #schedule-list{
+        font-weight: bold; 
+        font-size:large;
+        padding-top: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+    .schedule{
+        width: 90%;
+        height: 3rem;
+        margin-left: 5%;
+        background-color: rgb(84 103 143);
+        border-radius: 1rem 1rem;
+        text-align: center;
+        display: inline-block;
+    }
+
+    .schedule #schedule-name {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color : white;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .schedule #schedule-date {
+        display: table-cell;
+        vertical-align: middle;
+        width: 15rem;
+        height: 3rem;
+        color : white;
+        font-weight: bold;
+        font-size: large;
+        text-align: center;
+    }
+
+    .schedule #schedule-money {
+        display: table-cell;
+        vertical-align: middle;
+        width: 10rem;
+        height: 3rem;
+        color : white;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    /* 하단 고정바 */
+    .foot-bar{
+        bottom: 0;
+        position: fixed;
+        height: 3.7rem;
+        background-color: rgb(42 182 212);
+        display: flex;
+        justify-content: space-between;
+        width: 37rem;
+        align-items: center;
+        margin: 0 auto;
+    }
+    
+    #foot-home{
+        width: auto;
+        height: 2.5rem;
+        margin-left:4rem;
+    }
+    #foot-invite{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-bell{
+        width: auto;
+        height: 2.5rem;
+    }
+    #foot-user{
+        width: auto;
+        height: 2.5rem;
+        margin-right:4rem;
+    }
+    
+        /* 스크롤바 */
+        ::-webkit-scrollbar {
+            width: 0px;
+            /* 세로축 스크롤바 길이 */
+            height: 0px;
+            /* 가로축 스크롤바 길이 */
+        }
+    
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-track-piece {
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-thumb {
+            border-radius: 8px;
+            background-color: transparent;
+        }
+    
+        ::-webkit-scrollbar-button {
+            background-color:transparent;
+            width: 0px;
+            height: 0px;
+        }
+    
+        ::-webkit-scrollbar-button:start {
+            background-color: transparent;
+            /* Top, Left 방향의 이동버튼 */
+        }
+    
+        ::-webkit-scrollbar-button:end {
+            background-color: transparent;
+            /* Bottom, Right 방향의 이동버튼 */
+        }
+    
+    
+        ::-webkit-scrollbar-corner {
+            background-color: transparent;
+            /* 우측 하단의 코너 부분 */
+        }
+    
+        ::-webkit-resizer {
+            background-color:transparent;
+        }
+}

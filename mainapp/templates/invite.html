@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery 연결 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <link href="../static/css/invite.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <!--고정 상단바-->
+    <div class="head-bar">
+        <img id="icon1" src="../static/img/list.png" alt="">
+        <img id="logo" src="../static/img/로고화이트.png" alt="">
+        <img id="icon2" src="../static/img/bell.png" alt="">
+    </div>
+
+    <!--계정-->
+
+    <form method='POST' action='{% url "search" %}'>
+        {% csrf_token %}
+
+        <div class="top">
+            <!-- 그룹명 -->
+            <div class="nameform">
+                <img id="mark" src="../static/img/leftmark.png" alt="">
+                <input class="gname" placeholder="그룹명을 입력해주세요" type="text" required="" name='gr' value={{group.title}}>
+                <img id="mark" src="../static/img/rightmark.png" alt="">
+            </div>
+        </div>
+        <!-- 중간 부분 -->
+        <div class="middle">
+            <!-- 멤버선택 -->
+            <div class="members">
+                <!-- <div class="each"> -->
+                {% for user in us_f_list%}
+                {% if not user.image%}
+                <img id="mimg" src="../static/img/basic.png" alt="">
+                <img id="delete" src="../static/img/delete.png" alt="">
+                <p>{{user.nickname}}</p>
+                <!-- </div> -->
+                {% else %}
+
+                <!-- <div class="each"> -->
+                <img id="mimg" src="{{user.image.url}}" alt="">
+                <img id="delete" src="../static/img/delete.png" alt="">
+                <p>{{user.nickname}}</p>
+                {% endif %}
+                {% endfor %}
+                <!-- </div> -->
+
+
+            </div>
+
+            <!-- 멤버검색 -->
+            <div class="searching">
+                <input id="search" placeholder="Search" type='text' name='invite'>
+                <button id="sbutton" type='submit'><img id="search-img" src="../static/img/search.png" alt=""></button>
+            </div>
+
+
+
+            <div class="container" id="new_test" style="display:flex;">
+                <div class="last">
+                    <a href='{% url "home" %}'>
+                        <p id="submit">모임 생성</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+    <!-- 하단 고정바 -->
+    <div class="foot-bar">
+        <a href="{% url 'home' %}"><img id="foot-home" src="../static/img/home.png" alt=""></a>
+        <a href="{% url 'check' %}"><img id="foot-invite" src="../static/img/invite.png" alt=""></a>
+        <a href="{% url 'map' %}"><img id="foot-bell" src="../static/img/bell.png" alt=""></a>
+        <a href="{% url 'portfolio' %}"><img id="foot-user" src="../static/img/user.png" alt=""></a>
+    </div>
+</body>
+
+</html>
+
+
+
+

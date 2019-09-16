@@ -1,0 +1,55 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- jQuery 연결 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>LOGIN</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/login.css">
+</head>
+
+<body>
+    <div class="section">
+        <!-- page -->
+        <div class="first">
+            <div class="first-top">
+                <!-- navbar -->
+                <div class="wrapper">
+                    <img id="logo" src="../static/img/로고화이트.png" alt="">
+                </div>
+                <div class="message">
+                    <div class="message-left">
+                        <img id="phone" src="../static/img/3.png" alt="">
+                    </div>
+                    <div class="message-right">
+                        <h1 id="title">"로그인해주세요"</h1>
+                        <p id="title-2">타임아웃과의 소중한 약속을<br>지금, 시작해주세요</p>
+                    </div>
+                </div>
+            </div>
+            <div class="first-bottom">
+                <div class="bottom">
+                    <a href="{% provider_login_url 'google' %}"><div class="button">
+                        <img id="loginicon" src="../static/img/google.png" alt="">
+                        <span id="name">구글로 타임아웃 함께하기</span>
+                    </div></a>
+                    <div class="button2">
+                        <img id="loginicon2" src="../static/img/facebook.png" alt="">
+                        <span id="name2">페이스북으로 타임아웃 함께하기</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

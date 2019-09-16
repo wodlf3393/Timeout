@@ -1,0 +1,812 @@
+/* 제일 굵음 */
+@font-face { font-family: 'Eoe_Zno_EB'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_EB.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* bold */
+@font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* medium */
+@font-face { font-family: 'Eoe_Zno_M'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_M.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* light */
+@font-face { font-family: 'Eoe_Zno_L'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_L.woff') format('woff'); font-weight: normal; font-style: normal; }
+/* 메인페이지 */
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css); .notosanskr * { font-family: 'Noto Sans KR', sans-serif; }
+@font-face { font-family: 'NotoSerifKR'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff'); font-weight: normal; font-style: normal; } */
+@media screen and (min-width:550px){
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+#top {
+    height: 95px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    background: transparent;
+    background-color: transparent;
+}
+
+#top .wrapper{
+    height: 95px;
+    display: flex;
+    justify-content: space-between;
+    width: 61rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+
+#menu{
+    float: right;
+}
+#menu li{
+    float: left;
+}
+#menu a {
+    line-height: 75px;
+    color: white;
+    padding: 0 15px;
+    display: block;
+}
+
+#logo {
+    width: 20%;
+    height: auto;
+}
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+.section {
+    background-size: cover;
+}
+
+
+/* Defining each section background and styles
+* --------------------------------------- */
+#section0 {
+    background-color : rgb(42 182 212);
+}
+
+#section2 {
+    background-image: url(../img/background\(5\).png);
+    background-position: left bottom;
+    background-size: cover;
+    padding: 6% 0 0 0;
+}
+
+#section3 {
+    /* background-image: url(../img/background\(4\).png);
+    padding: 6% 0 0 0;
+    background-position: left top;
+    background-size: cover; */
+}
+
+/* first-page */
+.first-left{
+    margin-top: 13%;
+    display: flex;
+    float: left;
+    /* margin-top: 0rem; */
+    margin-left: 17rem;
+    width: 35rem;
+    /* margin: 0 auto; */
+}
+
+
+.first-comment span{
+    font-family: 'Eoe_Zno_EB';
+    font-size : 5rem;
+    font-family: 'NotoSerifKR';
+    color :white;
+    font-weight:bold;
+    line-height: 1.4em;
+}
+
+.first-comment #light {
+    font-family: 'Eoe_Zno_B';
+    font-size: 1.6rem;
+    font-weight: lighter;
+    color: white;
+    margin-left: 0.2rem;
+    line-height: 1.6rem;
+}
+
+/* .first-right{
+    position: relative;
+}
+.first-right #img1{
+    position:absolute;
+    width :25rem;
+    height: auto;
+}
+.first-right #img2{
+    position:absolute;
+    margin-top: 20rem;
+    margin-left: 10rem;
+    width :10rem;
+    height: auto;
+} */
+
+/* .first-comment{
+    position: absolute;
+    left: -60rem;
+    width: 50rem;
+    margin-left: 17rem;
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 1s forwards;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+} */
+
+
+/* second-page */
+.second {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-left {
+    position: relative;
+    float: left;
+    align-items: center;
+    margin-left: 17rem;
+}
+
+.second-left #phone-img {
+    position :relative;
+    top: 0rem;
+    width : 25rem;
+    height: 43rem;
+}
+
+.second-left #screen {
+    margin-left: 3.5rem;
+    position: absolute;
+    top: 5.2rem;
+    left: 0.2rem;
+    width : 14.75rem;
+    height: 27rem;
+}
+
+.second-right {
+    /* position: relative; */
+    float:right;
+}
+
+.second-right .second-comment {
+    font-family: 'Eoe_Zno_M';
+    align-items:right;
+    margin-top: 17rem;
+    /* margin-left: 5rem; */
+    font-size : 3rem;
+    color: white;
+}
+
+.second-right .button{
+    width: 30rem;
+    justify-content: space-between;
+    margin-top: 7rem;
+    font-size: 1rem;
+    color: white;
+}
+
+/* third page */
+.third-left {
+    display: flex;
+    position: relative;
+    float: left;
+    margin-left: 17rem;
+}
+
+.third-right {
+    display: flex;
+    position: relative;
+    float: right;
+    margin-right: 17rem;
+    color: black;
+    font-size: 4rem;
+    align-items: center;
+}
+
+
+.button1{
+    cursor: pointer;
+    font-weight: bold;
+    width: 5rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+.button2{
+    cursor: pointer;
+    font-weight: bold;
+    width: 5rem;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+.button3 {
+    cursor: pointer;
+    font-weight: bold;
+    width: 5rem;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+.button4{
+    cursor: pointer;
+    font-weight: bold;
+    width: 5rem;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 15px;
+}
+
+#button-text{
+    margin-left: 10px;
+
+    
+}
+
+/* banner 띄우기 */
+#floatMenu {
+    position: absolute;
+    right: 20%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    text-align: center;
+    top: 110px;
+    /* margin-left: -606px;  */
+    /* 아이콘 위치 조절 */
+}
+
+#floatMenu .banner img{
+    width: 12rem;
+    height: 12rem;
+    /* 그림자효과 */
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+}
+
+/* .first-comment {
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; 
+    -webkit-animation: fadein 2s;
+    -o-animation: fadein 2s; 
+}
+@keyframes fadein {
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-moz-keyframes fadein { 
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-webkit-keyframes fadein { 
+    from {opacity:0;}
+    to {opacity:1;}
+}
+@-o-keyframes fadein { 
+    from {opacity:0;}
+    to {opacity: 1;}
+} */
+}
+@media screen and (min-width:480px) and (max-width:550px){
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+#top {
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    background: transparent;
+    background-color: transparent;
+}
+
+#top .wrapper{
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1{
+    color:white;
+    line-height: 95px;
+    float: left;
+}
+#menu{
+    float: right;
+}
+#menu li{
+    float: left;
+}
+#menu a {
+    line-height: 75px;
+    color: white;
+    padding: 0 15px;
+    display: block;
+}
+
+/* first-page */
+.first-left{
+    display: flex;
+    /* margin-top: 0rem; */
+    margin-left: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin-left:3rem;
+    width: 17rem;
+    align-items: center;
+    /* margin: 0 auto; */
+}
+
+.first-comment #bord{
+    font-size : 2.5rem;
+    font-family: 'NotoSerifKR';
+    color : hsl(61, 100%, 71%);
+    font-weight:bold;
+}
+
+.first-comment span{
+    font-size : 2.5rem;
+    font-family: 'NotoSerifKR';
+    color :white;
+    font-weight:bold;
+    line-height: 1.2em;
+}
+
+.first-comment #light {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    color: white;
+    margin-left: 0.2rem;
+    line-height: 1.2rem;
+}
+
+.first-right{
+    position: relative;
+}
+
+/* .first-comment{
+    position: absolute;
+    left: -60rem;
+    width: 50rem;
+    margin-left: 17rem;
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 1s forwards;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+} */
+
+
+/* second-page */
+.second {
+    display: flex;
+}
+
+.second-left {
+    position: relative;
+    float: left;
+    align-items: center;
+    margin-left: 1rem;
+}
+
+.second-left #phone-img {
+    position :relative;
+    top: 5rem;
+    width : 15rem;
+    height: auto;
+}
+
+.second-left #screen {
+    margin-left: 2.1rem;
+    position: absolute;
+    top: 8.2rem;
+    left: 0.16rem;
+    width : 8.8rem;
+    height: 15.5rem;
+}
+
+.second-left .second-comment{
+    display:none;
+}
+
+.second-right {
+    /* position: relative; */
+    float:right;
+    margin-right: 2rem;
+}
+
+.second-right .second-comment {
+    margin-top: 13rem;
+    /* margin-left: 5rem; */
+    font-size : 1.3rem;
+    color: white;
+    margin-bottom:2rem;
+}
+
+.second-right .button{
+    width: 15rem;
+    margin-top: 1rem;
+    bottom: 2rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+/* third page */
+.third-left {
+    display: flex;
+    position: relative;
+    float: left;
+    margin-left: 17rem;
+}
+
+.third-right {
+    display: flex;
+    position: relative;
+    float: right;
+    margin-right: 17rem;
+    color: black;
+    font-size: 4rem;
+    align-items: center;
+}
+
+
+.button1{
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button2{
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button3 {
+    flex:1;
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button4{
+    flex:1;
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+}
+
+/* banner 띄우기 */
+#floatMenu {
+    position: absolute;
+    right: 10%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    text-align: center;
+    top: 110px;
+    /* margin-left: -606px;  */
+    /* 아이콘 위치 조절 */
+}
+
+#floatMenu .banner img{
+    width: 7rem;
+    height: 7rem;
+    /* 그림자효과 */
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+}
+}
+
+@media screen and (max-width:480px) {
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* header */
+#top {
+    height: 4rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    margin-top: 1rem;
+    background: transparent;
+    background-color: transparent;
+}
+
+#top .wrapper{
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+h1{
+    color:white;
+    line-height: 95px;
+    float: left;
+}
+#menu{
+    /* display: none; */
+    float: right;
+}
+#menu li{
+    /* display: none; */
+    float: left;
+}
+#menu a {
+    /* display: none; */
+    line-height: 75px;
+    color: white;
+    padding: 0 0.3rem;
+    display: block;
+}
+
+/* first-page */
+.first-left{
+    display: flex;
+    /* margin-top: 0rem; */
+    float:left;
+    align-items: center;
+    /* justify-content: center; */
+    margin-left:10%;
+    width: 80%;
+    /* margin: 0 auto; */
+}
+
+.first-comment span{
+    font-size : 2.5rem;
+    font-family: 'NotoSerifKR';
+    color :white;
+    font-weight:bold;
+    line-height: 1.4em;
+}
+
+.first-comment #light {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    color: white;
+    margin-left: 0.3rem;
+    line-height: 1.2rem;
+}
+
+.first-right{
+    position: relative;
+}
+
+/* .first-comment{
+    position: absolute;
+    left: -60rem;
+    width: 50rem;
+    margin-left: 17rem;
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation: slide 1s forwards;
+    animation-delay: 1s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+} */
+
+
+/* second-page */
+.second {
+    display: flex;
+    flex-direction:column;        
+}
+
+.second-left {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.second-left #phone-img {
+    position :relative;
+    top: 2rem;
+    width : 15rem;
+    height: auto;
+}
+
+.second-left #screen {
+    margin-left: 2.1rem;
+    position: absolute;
+    top: 5.2rem;
+    left: 0.16rem;
+    width : 8.8rem;
+    height: 15.5rem;
+}
+
+.second-left .second-comment{
+    float: right;
+    margin-top: 12rem;
+    margin-right:1.5rem;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.second-right {
+    /* position: relative; */
+    align-items: center;
+    justify-content: center;
+}
+
+.second-right .second-comment {
+    display:none;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size : 1.3rem;
+    color: white;
+    margin-bottom:2rem;
+}
+
+.second-right .button{
+    margin-left:2.5rem;
+    width: 100%;
+    margin-top: 2rem;
+    bottom: 2rem;
+    font-size: medium;
+    color: white;
+}
+
+.second-right #button-text{
+    font-size: large;
+    color: white;
+}
+
+
+/* third page */
+.third-left {
+    display: flex;
+    position: relative;
+    float: left;
+    margin-left: 17rem;
+}
+
+.third-right {
+    display: flex;
+    position: relative;
+    float: right;
+    margin-right: 17rem;
+    color: black;
+    font-size: 4rem;
+    align-items: center;
+}
+
+
+.button1{
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button2{
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button3 {
+    flex:1;
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+    margin-right:0.3rem;
+}
+
+.button4{
+    flex:1;
+    cursor: pointer;
+    font-weight: bold;
+    width: 4rem;
+    text-align: center;
+    padding-bottom: 0.3rem;
+}
+
+/* banner 띄우기 */
+#floatMenu {
+    position: absolute;
+    right: 10%;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+    text-align: center;
+    top: 110px;
+    /* margin-left: -606px;  */
+    /* 아이콘 위치 조절 */
+}
+
+#floatMenu .banner img{
+    width: 7rem;
+    height: 7rem;
+    /* 그림자효과 */
+    -webkit-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -moz-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -ms-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    -o-filter: drop-shadow(0 1px 2px rgba(0,0,0,.5));
+    filter: drop-shadow(1px 1px 5px rgba(0,0,0,.5));
+}
+
+}

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage full-screen backgrounds." />
+    <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
+    <meta name="Resource-type" content="Document" />
+
+
+    <link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+
+    <!-- jQuery 연결 -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>타임아웃 소개페이지</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- jQuery 연결 -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/jquery.fullpage/2.9.4/jquery.fullpage.min.css">
+
+    <!-- index.css 연결 -->
+    <!-- <link rel="stylesheet" type="text/css" href="../static/css/index.css"> -->
+    <!-- 외부스크립트 연결 wow,animate -->
+    <link rel="stylesheet" href="../static/css/animate.css">
+    <script type="text/javascript" src="../static/js/wow.min.js"></script>
+    <script type="text/javascript" src="../static/js/fullpage.js"></script>
+    <script>
+        new WOW().init(); 
+    </script>
+
+</head>
+
+<style>
+    /* bold */
+@font-face { font-family: 'Eoe_Zno_B'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/Eoe_Zno_B.woff') format('woff'); font-weight: normal; font-style: normal; }
+    #third {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.third-left {
+    margin-top: 1rem;
+    margin-left: 10rem;
+    /* position: relative; */
+    float: left;
+
+
+}
+#img{
+    height: auto;
+    width: 60rem;
+    margin-left: -10rem;
+
+}
+    .third-right {
+    /* position: relative; */
+    margin-top: 15rem;
+    float:right;
+    margin-right: 25rem;
+}
+
+.third-right .third-comment #last{
+    /* margin-right: 5rem; */
+    font-size : 2.5rem;
+    color: rgb(42 182 212);
+    margin-bottom:2rem;
+    font-family: 'Eoe_Zno_B';
+}
+.third-right .triangle{
+    position:absolute;
+    float: right;
+    margin-left: 50rem;
+    margin-top: -3rem;
+    width:0px;height:0px;
+    border-right:43rem solid transparent; /*border의 성질을 이용해 오른쪽테두리만 투명으로 만든다. */
+    border-bottom:60rem solid rgb(42 182 212); /*border를 사용해 두께를 만든다.*/
+    transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+}
+
+    </style>
+<body>
+    <!-- html -->
+    <!-- navbar -->
+    <header id="top">
+        <div class="wrapper">
+            <img id="logo" src="../static/img/로고화이트.png" alt="">
+            <nav>
+                <!-- <ul id="menu">
+                    <li><a href="#firstPage">소개</a></li>
+                    <li><a href="#secondPage">주기능</a></li>
+                    <li><a href="#3rdPage">부가기능</a></li>
+                </ul> -->
+            </nav>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <!-- <img id="back1" src="../static/img/background(4).png" alt=""> -->
+            <div class="first-left">
+                <div class="first-comment">
+                    <div class="wow fadeInLeftBig">
+                        <span>당신의<br></span>
+                    </div>
+                    <div class="wow fadeInLeftBig" data-wow-duration="1.5s">
+                        <span>소중한 약속_을<br></span>
+                    </div>
+                    <div class="wow fadeInLeftBig" data-wow-duration="2s">
+                        <span>지켜드립니다</span>
+                    </div>
+                    <div class="wow fadeIn" data-wow-duration="4s">
+                        <p id="light">모두의 5분이 모여 세상을 바꾼다!<br>5분 지킴이, 타임아웃</p>
+                    </div>
+                </div>
+            </div>
+            <div class="first-right">
+                <div class="triangle"></div>
+                <img id="img1" src="../static/img/일러스트1.png">
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="section">
+                <div class="second">
+                    <div class="second-left">
+                        <div class="triangle"></div>
+                        <div class="phone">
+                            <!-- 휴대폰 큰 틀 -->
+                            <img id="phone-img" src="../static/img/phone.png" alt="">
+                            <!-- 휴대폰 안에 내용 -->
+                            <img id="screen" name="screen" src="../static/img/제안.png">
+                        </div>
+                    </div>
+                    <div class="second-right">
+                        <div class="second-comment">
+                            <span>당신의 약속,<br>타임아웃과 <span style="color: rgb(42 182 212)">함께</span>라면</span>
+                        </div>
+                        <div class="button">
+                            <span class="button1" onclick="ChangeImage1()">제안하기</span>
+                            <span class="button2" onclick="ChangeImage2()">내페이지</span>
+                            <span class="button3" onclick="ChangeImage3()">모임약속</span>
+                            <span class="button4" onclick="ChangeImage4()">약속인증</span>
+                            <br><br><br>
+                            <div class="text-margin">
+                                <span id="button-text">많은 사람, 다양한 약속!<br>모임 약속 관리를 제안해보세요</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="section" id="section3">
+            <div class="section">
+                <div id="third">
+                    <div class="third-left">
+                        <img id="img" src="../static/img/일러스트2.png" >
+                    </div>
+                    <div class="third-right">
+                        <div class="triangle"></div>
+                        <div class="third-comment">
+                            <span id="last" style="color: rgb(42 182 212);">지금 바로,<br>타임아웃과의<br>소중한 약속을</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+
+    <!-- floatMenu -->
+    <div id="floatMenu">
+        <a href="{% url 'login' %}" id="" title="타임아웃 시작하기">
+            <div class="wow fadeInDown" data-wow-delay="1.5s">
+                <div class="wow swing" data-wow-delay="2.3s">
+                    <div class="banner"><br>
+                        <img id="time" src="../static/img/banner.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- script -->
+
+    <!-- banner 띄우기 -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var currentPosition = parseInt($("#floatMenu").css("top"));
+            $(window).scroll(function () {
+                var position = $(window).scrollTop();
+                $("#floatMenu").stop().animate({
+                    "top": position + currentPosition + "px"
+                }, 1000);
+            });
+        });
+    </script>
+
+    <!-- 버튼누르면 사진바뀌는 스크립트 -->
+    <script type="text/javascript">
+        function ChangeImage1() {
+            document.screen.src = "../static/img/제안.png"
+        }
+
+        function ChangeImage2() {
+            document.screen.src = "../static/img/내페이지.png"
+        }
+
+        function ChangeImage3() {
+            document.screen.src = "../static/img/그룹.png"
+        }
+
+        function ChangeImage4() {
+            document.screen.src = "../static/img/도착인증.png"
+        }
+    </script>
+
+    <!-- 버튼누르면 텍스트 바뀌는 스크립트 -->
+    <script>
+        $(document).ready(function () {
+            $(".button1").click(function () {
+                document.getElementById("button-text").innerHTML = "많은 사람, 다양한 약속!<br> 모임 약속 관리를 제안해보세요";
+            });
+        });
+        $(document).ready(function () {
+            $(".button2").click(function () {
+                document.getElementById("button-text").innerHTML = "나만의 페이지에서 나의 계좌와 모임계좌들을<br>한번에 살펴보고 관리하세요";
+            });
+        });
+        $(document).ready(function () {
+            $(".button3").click(function () {
+                document.getElementById("button-text").innerHTML = "다양한 모임을 생성하고<br>많은 모임에 생성된 약속을 확인해보세요";
+            });
+        });
+        $(document).ready(function () {
+            $(".button4").click(function () {
+                document.getElementById("button-text").innerHTML = "약속을 만들었다면 반드시 지키도록!<br>지킬 수 밖에 없는 타임아웃을 사용하세요";
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".button1").click(function () {
+                $(".button1").css('border-bottom', '2px solid black')
+                $(".button2").css('border-bottom', '0px solid black')
+                $(".button3").css('border-bottom', '0px solid black')
+                $(".button4").css('border-bottom', '0px solid black')
+            });
+        });
+        $(document).ready(function () {
+            $(".button2").click(function () {
+                $(".button1").css('border-bottom', '0px solid black')
+                $(".button2").css('border-bottom', '2px solid black')
+                $(".button3").css('border-bottom', '0px solid black')
+                $(".button4").css('border-bottom', '0px solid black')
+            });
+        });
+        $(document).ready(function () {
+            $(".button3").click(function () {
+                $(".button1").css('border-bottom', '0px solid black')
+                $(".button2").css('border-bottom', '0px solid black')
+                $(".button3").css('border-bottom', '2px solid black')
+                $(".button4").css('border-bottom', '0px solid black')
+            });
+        });
+        $(document).ready(function () {
+            $(".button4").click(function () {
+                $(".button1").css('border-bottom', '0px solid black')
+                $(".button2").css('border-bottom', '0px solid black')
+                $(".button3").css('border-bottom', '0px solid black')
+                $(".button4").css('border-bottom', '2px solid black')
+            });
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        var myFullpage = new fullpage('#fullpage', {
+            verticalCentered: false
+        });
+    </script>
+
+    <!-- 크기조절 스크립트 -->
+    <!-- <script>
+    window.onload = function () {
+
+
+        $("#phone-img").height($(window).height());
+        $("#phone").width($(window).width());
+        $("#phone").height($(window).height());
+
+        var window_width = $(window).width() - $("#second-left").width();
+        var w = (window_width / 2);
+        $("#second-left").css("margin-left", w);
+
+    }
+
+    $(window).resize(function () {
+        $("#phone-img").height($(window).height());
+        $("#phone").width($(window).width());
+        $("#phone").height($(window).height());
+
+        var window_width = $(window).width() - $("#second-left").width();
+        var w = (window_width / 2);
+        $("#second-left").css("margin-left", w);
+    });
+</script> -->
+
+</body>
+
+</html>
